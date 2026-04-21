@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÒNG QUAY "SIÊU HỜI" 💖✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS: Phong cách Mềm Mại, Hiện Đại, Lãng Mạn */
+        :root {
+            --primary-color: #f7cac9; /* Hồng Phấn Tinh Tế */
+            --secondary-color: #fff0f5; /* Trắng Hồng Nhẹ */
+            --text-color: #6a5acd; /* Xanh Tím Than Mềm */
+            --highlight-color: #ff69b4; /* Hồng rực - Điểm nhấn */
+            --accent-color: #ffb6c1; /* Hồng Pastel Đậm */
+            --dark-text: #483d8b; /* Tím Sẫm */
+            --border-radius-soft: 20px;
+            --box-shadow-soft: 0 8px 15px rgba(255, 99, 177, 0.2);
+            --wheel-border: 6px solid var(--highlight-color);
+            --wheel-size: 280px; /* Kích thước bánh xe lớn hơn */
+
+            /* Định nghĩa màu sắc cho 6 ô đều nhau */
+            --wheel-color-0: #f5f5dc; /* Màu kem/trắng nhạt */
+            --wheel-color-1: #FFD1DC;
+            --wheel-color-2: #FFB6C1;
+            --wheel-color-3: #FF8C9D;
+            --wheel-color-4: #FF69B4;
+            --wheel-color-5: #FF4081;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--secondary-color);
+            margin: 0;
+            padding: 30px 20px;
+            color: var(--text-color);
+            text-align: center;
+            line-height: 1.6;
+            background-image: radial-gradient(circle, var(--secondary-color) 10%, #ffe4e1 100%);
+        }
+
+        .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px; /* Giảm từ 40px xuống 20px */
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--box-shadow-soft);
+    border: 1px solid var(--primary-color);
+    box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều rộng */
+}
+
+        h1 {
+            color: var(--highlight-color);
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: var(--dark-text);
+            font-weight: 700;
+        }
+        
+        h2 {
+            color: var(--dark-text);
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        h2 .icon {
+            font-size: 1.5em;
+            color: var(--highlight-color);
+        }
+        
+        h3 {
+            color: var(--highlight-color);
+            border-bottom: 2px dashed var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+            background-color: var(--primary-color);
+            border-radius: var(--border-radius-soft);
+            margin-bottom: 30px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .balance-box, .login-box {
+            padding: 12px 25px;
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid var(--highlight-color);
+            box-shadow: var(--box-shadow-soft);
+        }
+
+        .spin-area {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wheel-section {
+    flex: 1;
+    min-width: 300px; /* Giảm từ 500px xuống 300px để vừa màn hình nhỏ */
+    max-width: 100%;  /* Đảm bảo không bao giờ rộng hơn màn hình */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius-soft);
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(255, 99, 177, 0.1);
+}
+        
+        .wheel-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .price-info {
+            font-size: 1.3em;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+            color: var(--dark-text);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 10px;
+        }
+
+        .spin-button {
+            background-color: var(--highlight-color);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 50px; /* Bo tròn mạnh */
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
+            text-transform: uppercase;
+        }
+
+        .spin-button:hover:not(:disabled) {
+            background-color: #ff3399;
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 15px rgba(255, 105, 180, 0.7);
+        }
+        
+        .spin-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .rule-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            font-size: 1em;
+            text-align: left;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .rule-list li {
+            background: var(--primary-color);
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            color: var(--dark-text);
+            border-left: 5px solid var(--highlight-color);
+        }
+        
+        .recharge-area {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #fffaf0; /* Màu kem */
+            border-radius: var(--border-radius-soft);
+            border: 3px dashed var(--highlight-color);
+        }
+        
+        .discount-schedule {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            border: 1px solid var(--highlight-color);
+            font-size: 1em;
+            text-align: center;
+            color: var(--dark-text);
+        }
+        .discount-schedule strong {
+            color: var(--highlight-color);
+            font-weight: 700;
+        }
+
+        /* --- CSS cho Bánh xe Vòng Quay --- */
+        .wheel-container {
+            position: relative;
+            width: var(--wheel-size);
+            height: var(--wheel-size);
+            border-radius: 50%;
+            border: var(--wheel-border);
+            margin: 30px auto 20px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(255, 105, 180, 0.5); /* Shadow nổi bật */
+            background-color: #fff;
+        }
+
+        .wheel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 3s cubic-bezier(0.25, 0.1, 0, 1);
+            background-image: conic-gradient(
+                var(--wheel-color-0) 0% 16.66%,
+                var(--wheel-color-1) 16.66% 33.32%,
+                var(--wheel-color-2) 33.32% 49.98%,
+                var(--wheel-color-3) 49.98% 66.64%,
+                var(--wheel-color-4) 66.64% 83.3%,
+                var(--wheel-color-5) 83.3% 100%
+            );
+        }
+
+        .wheel-indicator {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid #ff007f; /* Kim chỉ màu nóng */
+            z-index: 10;
+        }
+        
+        .wheel-indicator::after {
+            content: '▼';
+            position: absolute;
+            top: 20px;
+            left: -10px;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        /* --- CSS cho Chú giải (Legend) --- */
+        .wheel-legend {
+            margin-top: 25px;
+            width: 100%;
+            max-width: 450px;
+            text-align: left;
+            border: 2px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .legend-color-box {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%; /* Tròn */
+            margin-right: 10px;
+            border: 2px solid var(--text-color);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .header-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .balance-box, .login-box {
+                width: 90%;
+            }
+            .spin-area {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .wheel-section {
+                min-width: unset;
+                width: 100%;
+            }
+            .wheel-size {
+                --wheel-size: 250px;
+            }
+            .legend-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+    :root {
+        --wheel-size: 240px; /* Thu nhỏ bánh xe một chút trên điện thoại nhỏ */
+    }
+    
+    h1 {
+        font-size: 1.8em; /* Thu nhỏ tiêu đề */
+    }
+
+    .recharge-area input {
+        width: 100% !important; /* Ô nhập tiền chiếm hết chiều ngang */
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+    
+    .legend-grid {
+        grid-template-columns: 1fr !important; /* Chú giải chỉ 1 cột trên mobile */
+    }
+}
+
+/* Khung đồng hồ màu hồng hợp tone web */
+.vietnam-time-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.time-card {
+    background: #fff0f5; /* Nền trắng hồng nhẹ nhàng */
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 4px solid var(--highlight-color); /* Viền hồng rực rỡ */
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    transition: transform 0.3s;
+}
+
+.time-card:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi di chuột vào */
+}
+
+.time-label {
+    color: var(--dark-text);
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.time-digital {
+    color: var(--highlight-color); /* Chữ số màu hồng rực */
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif; /* Dùng font chung của web cho mềm mại */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .time-card {
+        padding: 8px 20px;
+        min-width: 180px;
+    }
+    .time-digital {
+        font-size: 1.8em;
+    }
+}
+
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 192, 203, 0.5); /* Nền hồng mờ */
+    backdrop-filter: blur(5px); /* Làm mờ hậu cảnh */
+    display: none; /* Ẩn mặc định */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Popup Content Card */
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.7);
+    animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.popup-icon { font-size: 50px; margin-bottom: 10px; }
+.popup-content h3 { color: var(--highlight-color); margin: 10px 0; font-size: 1.5em; }
+.popup-message { color: var(--dark-text); margin-bottom: 20px; font-weight: 500; }
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.popup-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn-confirm { background: var(--highlight-color); color: white; box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4); }
+.btn-cancel { background: #f0f0f0; color: #888; }
+.popup-btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { to { transform: scale(1); } }
+
+#loginUsernameInput:focus {
+    border-color: var(--highlight-color) !important;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+/* --- Hoạt động Nhật ký --- */
+.activity-log-section {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius-soft);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--box-shadow-soft);
+    text-align: left;
+}
+
+.log-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+    padding: 10px;
+}
+
+.log-item {
+    padding: 12px;
+    border-bottom: 1px dashed var(--accent-color);
+    font-size: 0.95em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log-item:last-child { border-bottom: none; }
+.log-time { color: #888; font-size: 0.85em; }
+.log-msg { font-weight: 500; color: var(--dark-text); }
+.log-type-win { color: #ff1493; font-weight: bold; }
+.log-type-pay { color: #2e8b57; font-weight: bold; }
+
+/* Tùy chỉnh thanh cuộn cho xinh */
+.log-container::-webkit-scrollbar { width: 8px; }
+.log-container::-webkit-scrollbar-track { background: var(--secondary-color); }
+.log-container::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+
+/* --- Khu vực Hướng dẫn & Tips --- */
+.guide-section {
+    margin: 20px 0 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+    border-radius: var(--border-radius-soft);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--box-shadow-soft);
+    text-align: left;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.guide-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 5px solid var(--highlight-color);
+}
+
+.guide-card h4 {
+    margin-top: 0;
+    color: var(--highlight-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.guide-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: var(--dark-text);
+}
+
+.guide-card ul li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tùy chỉnh thanh cuộn trong Popup cho đẹp */
+#guidePopup div::-webkit-scrollbar {
+    width: 6px;
+}
+#guidePopup div::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VÒNG QUAY "SIÊU HỜI" 💖✨</h1>
+        <p class="intro-text">Tham gia ngay để rinh về những phần quà giá trị với cơ hội trúng 100% sau vài lượt quay!</p>
+        
+        <div class="header-info">
+            <div class="login-box">
+                Tài khoản: <span id="usernameDisplay">Chưa Đăng Nhập</span>
+                <button onclick="showLoginPrompt()" style="background-color: var(--highlight-color); color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; margin-left: 10px;">Đăng Nhập/Lưu Tên 🔑</button>
+            </div>
+            <div class="balance-box">
+                Số dư: <span id="userBalance">0</span> VND 💰
+            </div>
+        </div>
+
+<div style="margin: 20px 0;">
+    <button onclick="toggleGuidePopup(true)" class="spin-button" style="font-size: 1.2em; padding: 12px 30px; background: linear-gradient(to right, #ff69b4, #da70d6);">
+        📖 XEM CẨM NANG & TIPS SĂN QUÀ
+    </button>
+</div>
+
+        <div class="recharge-area">
+    <h2><span class="icon">💸</span>KHU VỰC NẠP TIỀN</h2>
+    <p>LƯU Ý: Thông báo cho người tổ chức để xác nhận.</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <input type="number" id="rechargeAmount" placeholder="Số tiền (VND)" 
+               style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); flex: 1; min-width: 200px;">
+        <button onclick="recharge()" 
+                style="background-color: #4CAF50; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; max-width: 150px;">
+            NẠP TIỀN
+        </button>
+    </div>
+</div>
+
+<div class="vietnam-time-container">
+    <div class="time-card">
+        <span class="time-label">💖 GIỜ VIỆT NAM HIỆN TẠI 💖</span>
+        <div id="currentVNHour" class="time-digital">00:00:00</div>
+    </div>
+</div>
+
+        <div class="spin-area">
+            <div class="wheel-section" id="wheel1">
+    <h2><span class="icon">👑</span> VÒNG QUAY SKIN LIÊN QUÂN</h2>
+    
+    <div class="wheel-container">
+                    <div class="wheel" id="skinWheel">
+                        
+                    </div>
+                    <div class="wheel-indicator"></div>
+                </div>
+                
+                <div class="price-info">
+                    Giá: <span id="skinPrice" style="color: var(--highlight-color);">50.000</span> VND/lượt
+                </div>
+                
+                <div class="discount-schedule">
+                    <strong>⏰ LỊCH GIẢM GIÁ TRONG NGÀY ⏰</strong><br>
+                    ✨ Giờ Vàng (10%): 11:00 AM - 11:59 AM<br>
+                    💎 Giờ Kim Cương (12%): 06:00 PM - 06:59 PM
+                </div>
+                
+                <div class="price-info discount-info">
+                    Trạng thái hiện tại: <span id="skinDiscountInfo" style="color: red; font-weight: normal;">Chưa áp dụng giảm giá.</span>
+                </div>
+                <p style="font-size: 1.1em; font-weight: bold; color: var(--dark-text);">Số lượt đã quay: <span id="skinSpinCount" style="color: var(--highlight-color);">0</span></p>
+                <button class="spin-button" onclick="spinWheel(1, 50000)">QUAY NGAY! 🎲</button>
+                
+                <h3>🎁 QUÀ CHẮC CHẮN THEO LƯỢT:</h3>
+                <ul class="rule-list">
+                    <li>2 lượt: Chắc chắn trúng skin 199QH</li>
+                    <li>4 lượt: Chắc chắn trúng skin 399QH</li>
+                    <li>5 lượt: Chắc chắn trúng skin 499QH</li>
+                    <li>6 lượt: Chắc chắn trúng skin 599QH</li>
+                    <li>8 lượt: Chắc chắn trúng skin 799QH</li>
+                    <li style="color: blue; border-left-color: blue;">*Vật phẩm trúng phải mua skin tương ứng và chụp hình lại.*</li>
+                </ul>
+
+                <div class="wheel-legend">
+                    <h3>Chú giải vật phẩm (Tỷ lệ)</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-0);"></div><span>Skin 99QH (95.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-1);"></div><span>Skin 199QH (3.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-2);"></div><span>Skin 399QH (1.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-3);"></div><span>Skin 499QH (0.5%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-4);"></div><span>Skin 599QH (0.3%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-5);"></div><span>Skin 799QH (0.2%)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wheel-section" id="wheel2">
+                <h2><span class="icon">🎁</span> VÒNG QUAY THẺ GARENA</h2>
+                
+                <div class="wheel-container">
+                    <div class="wheel" id="garenaWheel">
+                        
+                    </div>
+                    <div class="wheel-indicator"></div>
+                </div>
+                
+                <div class="price-info">
+                    Giá: <span id="garenaPrice" style="color: var(--highlight-color);">20.000</span> VND/lượt
+                </div>
+                
+                <div class="discount-schedule">
+                    <strong>⏰ LỊCH GIẢM GIÁ TRONG NGÀY ⏰</strong><br>
+                    ✨ Giờ Vàng (10%): 09:00 AM - 09:59 AM<br>
+                    💎 Giờ Kim Cương (15%): 04:00 PM - 04:59 PM
+                </div>
+                
+                <div class="price-info discount-info">
+                    Trạng thái hiện tại: <span id="garenaDiscountInfo" style="color: red; font-weight: normal;">Chưa áp dụng giảm giá.</span>
+                </div>
+                <p style="font-size: 1.1em; font-weight: bold; color: var(--dark-text);">Số lượt đã quay: <span id="garenaSpinCount" style="color: var(--highlight-color);">0</span></p>
+                <button class="spin-button" onclick="spinWheel(2, 20000)">QUAY NGAY! 🃏</button>
+                
+                <h3>🎁 QUÀ CHẮC CHẮN THEO LƯỢT:</h3>
+                <ul class="rule-list">
+                    <li>3 lượt: Chắc chắn trúng thẻ Garena 50k (+10k)</li>
+                    <li>5 lượt: Chắc chắn trúng thẻ Garena 100k</li>
+                    <li>10 lượt: Chắc chắn trúng thẻ Garena 200k</li>
+                    <li>13 lượt: Chắc chắn trúng thẻ Garena 200k+50k (+10k)</li>
+                    <li>15 lượt: Chắc chắn trúng thẻ Garena 200k+100k</li>
+                </ul>
+
+                <div class="wheel-legend">
+                    <h3>Chú giải vật phẩm (Tỷ lệ)</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-0);"></div><span>Thẻ 20K (95.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-1);"></div><span>Thẻ 50K+10K (3.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-2);"></div><span>Thẻ 100K (1.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-3);"></div><span>Thẻ 200K (0.5%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-4);"></div><span>Thẻ 200K+50K (0.3%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-5);"></div><span>Thẻ 200K+100K (0.2%)</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wheel-section" id="wheel3">
+    <h2><span class="icon">🔥</span> VÒNG QUAY THẺ ZING</h2>
+    
+    <div class="wheel-container">
+        <div class="wheel" id="zingWheel"></div>
+        <div class="wheel-indicator"></div>
+    </div>
+    
+    <div class="price-info">
+        Giá: <span id="zingPriceDisplay">
+            <span id="zingPriceMain" style="color: var(--highlight-color);">10.000</span> VND/lượt
+        </span>
+    </div>
+    
+    <div class="discount-schedule">
+        <strong>⏰ LỊCH GIẢM GIÁ TRONG NGÀY ⏰</strong><br>
+        ✨ Giờ Vàng (10%): 12:00 PM - 01:00 PM<br>
+        💎 Giờ Kim Cương (20%): 08:00 PM - 09:00 PM
+    </div>
+    
+    <div class="price-info discount-info">
+        Trạng thái hiện tại: <span id="zingDiscountInfo" style="color: red; font-weight: normal;">Chưa áp dụng giảm giá.</span>
+    </div>
+    <p style="font-size: 1.1em; font-weight: bold; color: var(--dark-text);">Số lượt đã quay: <span id="zingSpinCount" style="color: var(--highlight-color);">0</span></p>
+    <button class="spin-button" onclick="spinWheel(3, 10000)">QUAY NGAY! ⚡</button>
+    
+    <h3>🎁 QUÀ CHẮC CHẮN THEO LƯỢT:</h3>
+    <ul class="rule-list">
+        <li>2 lượt: Chắc chắn trúng thẻ Zing 20k</li>
+        <li>5 lượt: Chắc chắn trúng thẻ Zing 50k</li>
+        <li>10 lượt: Chắc chắn trúng thẻ Zing 100k</li>
+        <li>15 lượt: Chắc chắn trúng thẻ Zing 100k+50k</li>
+        <li>20 lượt: Chắc chắn trúng thẻ Zing 200k</li>
+    </ul>
+
+    <div class="wheel-legend">
+        <h3>Chú giải vật phẩm (Tỷ lệ)</h3>
+        <div class="legend-grid">
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-0);"></div><span>Thẻ 10K (97.0%)</span></div>
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-1);"></div><span>Thẻ 20K (2.0%)</span></div>
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-2);"></div><span>Thẻ 50K (0.6%)</span></div>
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-3);"></div><span>Thẻ 100K (0.3%)</span></div>
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-4);"></div><span>Thẻ 150K (0.06%)</span></div>
+            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-5);"></div><span>Thẻ 200K (0.04%)</span></div>
+        </div>
+    </div>
+</div>
+        </div>
+        
+        <div class="activity-log-section">
+    <h2><span class="icon">📜</span> NHẬT KÝ HOẠT ĐỘNG</h2>
+    <div id="activityLog" class="log-container">
+        <div style="text-align: center; color: #888; padding: 20px;">Chưa có hoạt động nào...</div>
+    </div>
+</div>
+
+        <div style="margin-top: 40px; padding: 20px; border-top: 2px dashed var(--primary-color);">
+    <p style="font-style: italic; color: #db7093; font-size: 0.95em; line-height: 1.8;">
+        💖 <strong>LƯU Ý 1:</strong> Tất cả vật phẩm trúng thưởng đều không được phép quy đổi thành tiền thật dưới bất kỳ hình thức nào. <br>
+        💖 <strong>LƯU Ý 2:</strong> Vì số tiền bạn nạp vào là tiền thật, nên nếu sau khi chơi bạn vẫn còn dư số dư trong tài khoản, hệ thống sẽ hỗ trợ hoàn lại tiền cho bạn.
+    </p>
+    <p style="color: #ff69b4; font-weight: bold; font-size: 0.85em; margin-top: 10px;">
+        ✨ Chúc bạn có những giây phút thư giãn thật tuyệt vời tại Vòng Quay "Siêu Hời"✨
+    </p>
+</div>
+
+    </div>
+
+<div id="customPopup" class="popup-overlay">
+    <div class="popup-content">
+        <div id="popupIcon" class="popup-icon">💖</div>
+        <h3 id="popupTitle">Thông báo</h3>
+        <p id="popupMessage">Nội dung thông báo ở đây...</p>
+        <div class="popup-buttons">
+            <button id="popupConfirmBtn" class="popup-btn btn-confirm">Xác nhận</button>
+            <button id="popupCancelBtn" class="popup-btn btn-cancel">Hủy</button>
+        </div>
+    </div>
+</div>
+
+<div id="loginPopup" class="popup-overlay">
+    <div class="popup-content">
+        <div class="popup-icon">🔑</div>
+        <h3>ĐĂNG NHẬP</h3>
+        <p>Vui lòng nhập tên để lưu dữ liệu quay nhé:</p>
+        <input type="text" id="loginUsernameInput" placeholder="Tên của bạn..." 
+               style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); width: 80%; margin-bottom: 20px; outline: none; text-align: center; font-family: 'Quicksand';">
+        <div class="popup-buttons">
+            <button id="loginConfirmBtn" class="popup-btn btn-confirm">BẮT ĐẦU</button>
+            <button id="loginCancelBtn" class="popup-btn btn-cancel">HỦY</button>
+        </div>
+    </div>
+</div>
+
+<div id="guidePopup" class="popup-overlay">
+    <div class="popup-content" style="max-width: 600px; text-align: left; padding: 25px;">
+        <div class="popup-icon" style="text-align: center;">📖</div>
+        <h3 style="text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">✨ CẨM NANG SĂN QUÀ "SIÊU HỜI" ✨</h3>
+        
+        <div style="max-height: 400px; overflow-y: auto; padding-right: 10px; font-family: 'Quicksand';">
+            <h4 style="color: var(--highlight-color);">🎮 CÁCH CHƠI ĐƠN GIẢN</h4>
+            <ul style="padding-left: 20px; font-size: 0.95em;">
+                <li>🔑 <strong>Đăng nhập:</strong> Nhấn "Đăng Nhập" để hệ thống nhận diện và lưu lượt quay riêng cho bạn.</li>
+                <li>💸 <strong>Nạp tiền:</strong> Nhập số tiền và báo Admin. Số dư sẽ được cộng ngay khi xác nhận.</li>
+                <li>🎰 <strong>Quay & Nhận:</strong> Chọn vòng quay, nhấn nút. Khi trúng, hãy nhấn "Xác nhận nhận quà" để lưu kết quả.</li>
+            </ul>
+
+            <h4 style="color: var(--highlight-color); margin-top: 20px;">💡 TIPS SĂN QUÀ GIÁ RẺ</h4>
+            <div style="background: var(--secondary-color); padding: 15px; border-radius: 15px; border-left: 5px solid var(--highlight-color);">
+                <p style="margin: 0 0 10px 0;">⏰ ✨ <b>Săn Giờ Vàng:</b> Hãy chú ý đồng hồ trên Web. Quay vào khung giờ <b>Vàng/Kim Cương</b> để được hệ thống tự động giảm giá từ <b>10% - 20%</b>.</p>
+                
+                <p style="margin: 0 0 10px 0;">🛡️ ✨ <b>Cơ chế Tích Lũy (Bảo Hiểm):</b> Đây là điểm đặc biệt nhất! 
+                    <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: var(--dark-text);">
+                        ➕ - Mỗi khi bạn quay, hệ thống sẽ cộng dồn <b>"Số lượt đã quay"</b>. <br>
+                        🏆 - Khi chạm các mốc (ví dụ: 2 lượt, 5 lượt...), bạn sẽ <b>CHẮC CHẮN</b> nhận được quà cao cấp tương ứng mà không cần dựa vào may mắn. <br>
+                        🚫 - <b>Cách để tích lượt:</b> Khi trúng quà nhỏ, nếu bạn muốn nuôi mốc cao hơn, hãy <b>BẤM NÚT "HỦY"</b> khi bảng thông báo hỏi "Có muốn lấy quà không?". Lượt quay của bạn sẽ được giữ lại và tích lũy tiếp. <br>
+                        🔄 - Nếu nhận quà nhỏ (như Skin 99QH), số lượt tích lũy <b>KHÔNG bị reset</b> miễn là bạn không bấm xác nhận lấy nó.
+                    </span>
+                </p>
+
+                <p style="margin: 0 0 10px 0; background: #fff5f5; padding: 10px; border-radius: 10px; border: 1px solid #ffcccc;">
+                    <b style="color: #ff0000;">⚠️ LƯU Ý QUAN TRỌNG:</b> 
+                    <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #d32f2f;">
+                        🚫 Nếu bạn đang tích lượt để săn các mốc quà cao hơn mà lại nhấn <b>"Xác nhận nhận quà"</b> cho một món quà nhỏ vừa trúng, hệ thống sẽ <b>RESET số lượt về 0 ngay lập tức</b>. Khi đó, mọi công sức tích lũy của bạn đều sẽ "đổ sông đổ biển". Hãy cân nhắc kỹ trước khi nhận! 🌊
+                    </span>
+                </p>
+
+                <p style="margin: 0;">💾 ✨ <b>Bảo toàn dữ liệu:</b> Bạn có thể thoát web bất cứ lúc nào. Khi quay lại và đăng nhập đúng tên cũ, số lượt tích lũy và số dư sẽ được khôi phục 100%.</p>
+            </div>
+        </div>
+
+        <div class="popup-buttons" style="margin-top: 25px;">
+            <button onclick="toggleGuidePopup(false)" class="popup-btn btn-confirm" style="width: 100%;">💖 ĐÃ HIỂU, ĐI SĂN QUÀ THÔI! ✨</button>
+        </div>
+    </div>
+</div>
+    <script>
+      // --- LOGIC NHẬT KÝ HOẠT ĐỘNG ---
+    function addLog(message, typeClass) {
+        let logs = JSON.parse(localStorage.getItem(currentUser + '_activityLogs')) || [];
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('vi-VN') + " " + now.toLocaleDateString('vi-VN');
+        
+        logs.unshift({ msg: message, time: timeStr, type: typeClass });
+        if (logs.length > 50) logs.pop(); // Giữ tối đa 50 dòng
+        
+        localStorage.setItem(currentUser + '_activityLogs', JSON.stringify(logs));
+        displayLogs();
+    }
+
+    function displayLogs() {
+        const logContainer = document.getElementById('activityLog');
+        if (!logContainer) return;
+        let logs = JSON.parse(localStorage.getItem(currentUser + '_activityLogs')) || [];
+        
+        if (logs.length === 0) {
+            logContainer.innerHTML = `<div style="text-align: center; color: #888; padding: 20px;">Chưa có hoạt động nào...</div>`;
+            return;
+        }
+        logContainer.innerHTML = logs.map(log => `
+            <div class="log-item">
+                <span class="log-msg ${log.type}">${log.msg}</span>
+                <span class="log-time">${log.time}</span>
+            </div>
+        `).join('');
+    }
+    
+    // --- JAVASCRIPT: LOGIC MÔ PHỎNG (CLIENT-SIDE) ---
+    const SPIN_DURATION_MS = 3000; 
+    const MIN_ROTATIONS = 3; 
+
+    // 1. KHỞI TẠO DỮ LIỆU: Ưu tiên lấy từ bộ nhớ trình duyệt ngay khi load trang
+    let currentUser = localStorage.getItem('eventUsername') || "Khách";
+    let userBalance = parseFloat(localStorage.getItem('eventBalance')) || 0;
+    
+    // Tạo biến toàn cục
+    let skinSpinCount, garenaSpinCount, zingSpinCount;
+    let isSpinning = false; 
+
+    // Cập nhật hàm syncUserData để load nhật ký khi đổi user
+    function syncUserData() {
+        skinSpinCount = parseInt(localStorage.getItem(currentUser + '_skinSpinCount')) || 0;
+        garenaSpinCount = parseInt(localStorage.getItem(currentUser + '_garenaSpinCount')) || 0;
+        zingSpinCount = parseInt(localStorage.getItem(currentUser + '_zingSpinCount')) || 0;
+        displayLogs(); // Load nhật ký ngay khi đồng bộ user
+    }
+
+    // Gọi đồng bộ ngay lập tức
+    syncUserData();
+
+    // HÀM LƯU DỮ LIỆU TỔNG THỂ: Gọi mỗi khi có thay đổi để không bao giờ mất dữ liệu
+    function saveAllToLocal() {
+        localStorage.setItem('eventUsername', currentUser);
+        localStorage.setItem('eventBalance', userBalance);
+        localStorage.setItem(currentUser + '_skinSpinCount', skinSpinCount);
+        localStorage.setItem(currentUser + '_garenaSpinCount', garenaSpinCount);
+        localStorage.setItem(currentUser + '_zingSpinCount', zingSpinCount);
+    }
+
+    // 2. HÀM HIỂN THỊ POPUP TÙY CHỈNH (Giữ nguyên logic của bạn)
+    function showSweetAlert(title, message, icon, isConfirm, onConfirm) {
+        const popup = document.getElementById('customPopup');
+        const titleEl = document.getElementById('popupTitle');
+        const messageEl = document.getElementById('popupMessage');
+        const iconEl = document.getElementById('popupIcon');
+        const confirmBtn = document.getElementById('popupConfirmBtn');
+        const cancelBtn = document.getElementById('popupCancelBtn');
+
+        titleEl.innerText = title;
+        messageEl.innerText = message;
+        iconEl.innerText = icon;
+        
+        cancelBtn.style.display = isConfirm ? 'inline-block' : 'none';
+        popup.style.display = 'flex';
+
+        confirmBtn.onclick = () => {
+            popup.style.display = 'none';
+            if (onConfirm) onConfirm();
+        };
+        
+        cancelBtn.onclick = () => {
+            popup.style.display = 'none';
+        };
+    }
+
+    function updateUI() {
+        document.getElementById('usernameDisplay').textContent = currentUser;
+        document.getElementById('userBalance').textContent = userBalance.toLocaleString('vi-VN');
+        document.getElementById('skinSpinCount').textContent = skinSpinCount;
+        document.getElementById('garenaSpinCount').textContent = garenaSpinCount;
+        if(document.getElementById('zingSpinCount')) 
+            document.getElementById('zingSpinCount').textContent = zingSpinCount;
+    }
+    updateUI();
+
+    // 3. ĐỊNH NGHĨA VẬT PHẨM (Giữ nguyên 100%)
+    const skinItems = [ { name: "Skin 99QH", index: 0, prob: 0.95 }, { name: "Skin 199QH", index: 1, prob: 0.03 }, { name: "Skin 399QH", index: 2, prob: 0.01 }, { name: "Skin 499QH", index: 3, prob: 0.005 }, { name: "Skin 599QH", index: 4, prob: 0.003 }, { name: "Skin 799QH", index: 5, prob: 0.002 } ];
+    const garenaItems = [ { name: "Thẻ Garena 20K", index: 0, prob: 0.95 }, { name: "Thẻ Garena 50K (+10K)", index: 1, prob: 0.03 }, { name: "Thẻ Garena 100K", index: 2, prob: 0.01 }, { name: "Thẻ Garena 200K", index: 3, prob: 0.005 }, { name: "Thẻ Garena 200K+50K (+10K)", index: 4, prob: 0.003 }, { name: "Thẻ Garena 200K+100K", index: 5, prob: 0.002 } ];
+    const zingItems = [ { name: "Thẻ Zing 10K", index: 0, prob: 0.97 }, { name: "Thẻ Zing 20K", index: 1, prob: 0.02 }, { name: "Thẻ Zing 50K", index: 2, prob: 0.006 }, { name: "Thẻ Zing 100K", index: 3, prob: 0.003 }, { name: "Thẻ Zing 100K+50K", index: 4, prob: 0.0006 }, { name: "Thẻ Zing 200K", index: 5, prob: 0.0004 } ];
+
+    // 4. XỬ LÝ ĐĂNG NHẬP (Sửa lại để tự động load dữ liệu cũ của User)
+    function showLoginPrompt() {
+        const loginPopup = document.getElementById('loginPopup');
+        const loginInput = document.getElementById('loginUsernameInput');
+        const confirmBtn = document.getElementById('loginConfirmBtn');
+        const cancelBtn = document.getElementById('loginCancelBtn');
+
+        loginPopup.style.display = 'flex';
+        loginInput.focus();
+
+        confirmBtn.onclick = () => {
+            const newUsername = loginInput.value.trim();
+            if (newUsername !== "") {
+                saveAllToLocal(); // Lưu dữ liệu user hiện tại trước khi thoát
+
+                currentUser = newUsername;
+                syncUserData(); // Tải dữ liệu của User mới nhập vào
+                saveAllToLocal(); // Lưu trạng thái user mới vào session
+                
+                updateUI();
+                loginPopup.style.display = 'none';
+                loginInput.value = ''; 
+                showSweetAlert("Thành công", `Chào mừng, ${currentUser}!`, "💖", false);
+            } else {
+                showSweetAlert("Lỗi", "Vui lòng nhập tên nha!", "⚠️", false);
+            }
+        };
+
+        cancelBtn.onclick = () => {
+            loginPopup.style.display = 'none';
+            loginInput.value = '';
+        };
+    }
+
+    // 5. XỬ LÝ NẠP TIỀN
+    // Cập nhật hàm recharge để ghi log nạp tiền
+    function recharge() {
+        if (currentUser === "Khách") {
+            showSweetAlert("Opps!", "Vui lòng Đăng Nhập trước khi nạp tiền.", "🔑", false);
+            return;
+        }
+        const amountInput = document.getElementById('rechargeAmount');
+        const amount = parseFloat(amountInput.value);
+        if (amount > 0) {
+            showSweetAlert("Xác nhận nạp", `Nạp ${amount.toLocaleString('vi-VN')} VND vào tài khoản? Số tiền được nạp vô sẽ mang giá trị THỰC TẾ.`, "💸", true, () => {
+                userBalance += amount;
+                addLog(`Đã nạp +${amount.toLocaleString()} VND vào ví`, 'log-type-pay'); // Ghi log nạp tiền
+                saveAllToLocal();
+                updateUI();
+                showSweetAlert("Thành công", "Nạp tiền thành công!", "✨", false);
+                amountInput.value = '';
+            });
+        } else {
+            showSweetAlert("Lỗi", "Vui lòng nhập số tiền hợp lệ.", "❌", false);
+        }
+    }
+
+    // 6. THỜI GIAN & GIÁ (Giữ nguyên)
+    function getVietnamHour() {
+        return (new Date().getUTCHours() + 7) % 24;
+    }
+
+    function updatePrices() {
+        const hour = getVietnamHour(); 
+        const vnTime = new Date().toLocaleTimeString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        if (document.getElementById('currentVNHour')) document.getElementById('currentVNHour').textContent = vnTime;
+
+        let sP = 50000, gP = 20000, zP = 10000;
+        if (hour === 11) sP = 45000; else if (hour === 18) sP = 44000;
+        if (hour === 9) gP = 18000; else if (hour === 16) gP = 17000;
+        if (hour === 12) zP = 9000; else if (hour === 20) zP = 8000;
+
+        document.getElementById('skinPrice').textContent = sP.toLocaleString('vi-VN');
+        document.getElementById('garenaPrice').textContent = gP.toLocaleString('vi-VN');
+        document.getElementById('zingPriceDisplay').innerHTML = (hour===12||hour===20) ? `<span class="old-price">10.000</span> <span style="color:var(--highlight-color)">${zP.toLocaleString()}</span> VND` : zP.toLocaleString() + " VND";
+        return { skinPrice: sP, garenaPrice: gP, zingPrice: zP };
+    }
+    setInterval(updatePrices, 1000);
+
+    // 7. LOGIC QUAY (Giữ nguyên logic Chắc Chắn & Tỷ lệ của bạn)
+    function getRandomItemByProbability(items) {
+        let rand = Math.random();
+        let cumulativeProb = 0;
+        for (let i = 0; i < items.length; i++) {
+            cumulativeProb += items[i].prob;
+            if (rand < cumulativeProb) return {name: items[i].name, index: items[i].index};
+        }
+        return items[0];
+    }
+
+    function getGuaranteedItem(wheelId, spinCount) {
+        if (wheelId === 1) { 
+            if (spinCount === 8) return {name: "Skin 799QH (Chắc Chắn)", index: 5};
+            if (spinCount === 6) return {name: "Skin 599QH (Chắc Chắn)", index: 4};
+            if (spinCount === 5) return {name: "Skin 499QH (Chắc Chắn)", index: 3};
+            if (spinCount === 4) return {name: "Skin 399QH (Chắc Chắn)", index: 2};
+            if (spinCount === 2) return {name: "Skin 199QH (Chắc Chắn)", index: 1};
+        } else if (wheelId === 2) { 
+            if (spinCount === 15) return {name: "Thẻ Garena 200K+100K (Chắc Chắn)", index: 5};
+            if (spinCount === 13) return {name: "Thẻ Garena 200K+50K (+10K) (Chắc Chắn)", index: 4};
+            if (spinCount === 10) return {name: "Thẻ Garena 200K (Chắc Chắn)", index: 3};
+            if (spinCount === 5) return {name: "Thẻ Garena 100K (Chắc Chắn)", index: 2};
+            if (spinCount === 3) return {name: "Thẻ Garena 50K (+10K) (Chắc Chắn)", index: 1};
+        } else if (wheelId === 3) {
+            if (spinCount === 20) return {name: "Thẻ Zing 200K (Chắc Chắn)", index: 5};
+            if (spinCount === 15) return {name: "Thẻ Zing 100K+50K (Chắc Chắn)", index: 4};
+            if (spinCount === 10) return {name: "Thẻ Zing 100K (Chắc Chắn)", index: 3};
+            if (spinCount === 5) return {name: "Thẻ Zing 50K (Chắc Chắn)", index: 2};
+            if (spinCount === 2) return {name: "Thẻ Zing 20K (Chắc Chắn)", index: 1};
+        }
+        return null;
+    }
+
+    // Cập nhật hàm spinWheel để ghi log trúng thưởng
+    function spinWheel(wheelId, basePrice) {
+        if (currentUser === "Khách" || isSpinning) {
+            showSweetAlert("Chờ chút!", isSpinning ? "Đang quay..." : "Vui lòng đăng nhập!", "⚠️", false);
+            return;
+        }
+        const prices = updatePrices();
+        const price = wheelId === 1 ? prices.skinPrice : (wheelId === 2 ? prices.garenaPrice : prices.zingPrice);
+        if (userBalance < price) {
+            showSweetAlert("Hết tiền!", `Cần ${(price - userBalance).toLocaleString()} VND để quay.`, "💸", false);
+            return;
+        }
+
+        isSpinning = true;
+        userBalance -= price;
+        
+        if (wheelId === 1) skinSpinCount++; 
+        else if (wheelId === 2) garenaSpinCount++; 
+        else zingSpinCount++;
+
+        saveAllToLocal();
+        updateUI();
+
+        let currentSpinCount = (wheelId === 1) ? skinSpinCount : (wheelId === 2 ? garenaSpinCount : zingSpinCount);
+        let result = getGuaranteedItem(wheelId, currentSpinCount) || getRandomItemByProbability(wheelId === 1 ? skinItems : (wheelId === 2 ? garenaItems : zingItems));
+
+        const wheel = (wheelId === 1) ? document.getElementById('skinWheel') : (wheelId === 2 ? document.getElementById('garenaWheel') : document.getElementById('zingWheel'));
+        const targetRot = (MIN_ROTATIONS * 360) + (360 - (result.index * 60 + 30));
+        
+        wheel.style.transition = `transform 3s cubic-bezier(0.25, 0.1, 0, 1)`;
+        wheel.style.transform = `rotate(${targetRot}deg)`;
+        
+        setTimeout(() => {
+            isSpinning = false;
+            const displayItemName = result.name.replace(' (Chắc Chắn)', '');
+            
+            showSweetAlert("TRÚNG QUÀ RỒI! 🎁", `Bạn nhận được: ${displayItemName}. Nhận ngay nhé?`, "💖", true, () => {
+                addLog(`🎰 Trúng quà: ${displayItemName}`, 'log-type-win'); // Ghi log trúng thưởng
+                showSweetAlert("Thành công", `Đã ghi nhận phần quà cho ${currentUser}`, "✨", false);
+                if (wheelId === 1) skinSpinCount = 0; else if (wheelId === 2) garenaSpinCount = 0; else zingSpinCount = 0;
+                saveAllToLocal();
+                updateUI();
+            });
+            
+            setTimeout(() => {
+                wheel.style.transition = 'none';
+                wheel.style.transform = `rotate(${targetRot % 360}deg)`;
+            }, 500);
+        }, 3000);
+    }
+    
+    // Hàm đóng/mở Popup Cẩm Nang
+function toggleGuidePopup(show) {
+    const popup = document.getElementById('guidePopup');
+    if (show) {
+        popup.style.display = 'flex';
+    } else {
+        popup.style.display = 'none';
+    }
+}
+</script>
+</body>
+</html>
