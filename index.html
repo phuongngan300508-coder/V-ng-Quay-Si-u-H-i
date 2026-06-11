@@ -40,15 +40,15 @@
         }
 
         .container {
-    max-width: 1300px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px; /* Giảm từ 40px xuống 20px */
-    border-radius: var(--border-radius-soft);
-    box-shadow: var(--box-shadow-soft);
-    border: 1px solid var(--primary-color);
-    box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều rộng */
-}
+            max-width: 1300px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px; /* Giảm từ 40px xuống 20px */
+            border-radius: var(--border-radius-soft);
+            box-shadow: var(--box-shadow-soft);
+            border: 1px solid var(--primary-color);
+            box-sizing: border-box; /* Quan trọng để padding không làm tăng chiều rộng */
+        }
 
         h1 {
             color: var(--highlight-color);
@@ -117,19 +117,19 @@
         }
 
         .wheel-section {
-    flex: 1;
-    min-width: 300px; /* Giảm từ 500px xuống 300px để vừa màn hình nhỏ */
-    max-width: 100%;  /* Đảm bảo không bao giờ rộng hơn màn hình */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: var(--border-radius-soft);
-    border: 1px solid var(--accent-color);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(255, 99, 177, 0.1);
-}
+            flex: 1;
+            min-width: 300px; /* Giảm từ 500px xuống 300px để vừa màn hình nhỏ */
+            max-width: 100%;  /* Đảm bảo không bao giờ rộng hơn màn hình */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: var(--border-radius-soft);
+            border: 1px solid var(--accent-color);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(255, 99, 177, 0.1);
+        }
         
         .wheel-section:hover {
             transform: translateY(-5px);
@@ -195,12 +195,17 @@
             border-left: 5px solid var(--highlight-color);
         }
         
-        .recharge-area {
+        .recharge-area, .withdraw-area {
             margin-top: 30px;
             padding: 25px;
             background-color: #fffaf0; /* Màu kem */
             border-radius: var(--border-radius-soft);
             border: 3px dashed var(--highlight-color);
+        }
+
+        .withdraw-area {
+            background-color: #f0fff0; /* Đổi màu xanh lá nhẹ cho khu vực rút tiền dễ phân biệt */
+            border: 3px dashed #4CAF50;
         }
         
         .discount-schedule {
@@ -336,237 +341,238 @@
         }
         
         @media (max-width: 480px) {
-    :root {
-        --wheel-size: 240px; /* Thu nhỏ bánh xe một chút trên điện thoại nhỏ */
-    }
-    
-    h1 {
-        font-size: 1.8em; /* Thu nhỏ tiêu đề */
-    }
+            :root {
+                --wheel-size: 240px; /* Thu nhỏ bánh xe một chút trên điện thoại nhỏ */
+            }
+            
+            h1 {
+                font-size: 1.8em; /* Thu nhỏ tiêu đề */
+            }
 
-    .recharge-area input {
-        width: 100% !important; /* Ô nhập tiền chiếm hết chiều ngang */
-        margin-right: 0 !important;
-        margin-bottom: 10px;
-    }
-    
-    .legend-grid {
-        grid-template-columns: 1fr !important; /* Chú giải chỉ 1 cột trên mobile */
-    }
-}
+            .recharge-area input, .withdraw-area input {
+                width: 100% !important; /* Ô nhập tiền chiếm hết chiều ngang */
+                margin-right: 0 !important;
+                margin-bottom: 10px;
+            }
+            
+            .legend-grid {
+                grid-template-columns: 1fr !important; /* Chú giải chỉ 1 cột trên mobile */
+            }
+        }
 
-/* Khung đồng hồ màu hồng hợp tone web */
-.vietnam-time-container {
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    padding: 0 15px;
-}
+        /* Khung đồng hồ màu hồng hợp tone web */
+        .vietnam-time-container {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            padding: 0 15px;
+        }
 
-.time-card {
-    background: #fff0f5; /* Nền trắng hồng nhẹ nhàng */
-    padding: 10px 25px;
-    border-radius: 50px;
-    border: 4px solid var(--highlight-color); /* Viền hồng rực rỡ */
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 220px;
-    transition: transform 0.3s;
-}
+        .time-card {
+            background: #fff0f5; /* Nền trắng hồng nhẹ nhàng */
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 4px solid var(--highlight-color); /* Viền hồng rực rỡ */
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 220px;
+            transition: transform 0.3s;
+        }
 
-.time-card:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi di chuột vào */
-}
+        .time-card:hover {
+            transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi di chuột vào */
+        }
 
-.time-label {
-    color: var(--dark-text);
-    font-size: 0.85em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 2px;
-}
+        .time-label {
+            color: var(--dark-text);
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
 
-.time-digital {
-    color: var(--highlight-color); /* Chữ số màu hồng rực */
-    font-size: 2.2em;
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif; /* Dùng font chung của web cho mềm mại */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
+        .time-digital {
+            color: var(--highlight-color); /* Chữ số màu hồng rực */
+            font-size: 2.2em;
+            font-weight: bold;
+            font-family: 'Quicksand', sans-serif; /* Dùng font chung của web cho mềm mại */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
 
-@media (max-width: 768px) {
-    .time-card {
-        padding: 8px 20px;
-        min-width: 180px;
-    }
-    .time-digital {
-        font-size: 1.8em;
-    }
-}
+        @media (max-width: 768px) {
+            .time-card {
+                padding: 8px 20px;
+                min-width: 180px;
+            }
+            .time-digital {
+                font-size: 1.8em;
+            }
+        }
 
-/* Popup Overlay */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 192, 203, 0.5); /* Nền hồng mờ */
-    backdrop-filter: blur(5px); /* Làm mờ hậu cảnh */
-    display: none; /* Ẩn mặc định */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    animation: fadeIn 0.3s ease;
-}
+        /* Popup Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 192, 203, 0.5); /* Nền hồng mờ */
+            backdrop-filter: blur(5px); /* Làm mờ hậu cảnh */
+            display: none; /* Ẩn mặc định */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s ease;
+        }
 
-/* Popup Content Card */
-.popup-content {
-    background: white;
-    padding: 30px;
-    border-radius: 30px;
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-    transform: scale(0.7);
-    animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
+        /* Popup Content Card */
+        .popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transform: scale(0.7);
+            animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+        }
 
-.popup-icon { font-size: 50px; margin-bottom: 10px; }
-.popup-content h3 { color: var(--highlight-color); margin: 10px 0; font-size: 1.5em; }
-.popup-message { color: var(--dark-text); margin-bottom: 20px; font-weight: 500; }
+        .popup-icon { font-size: 50px; margin-bottom: 10px; }
+        .popup-content h3 { color: var(--highlight-color); margin: 10px 0; font-size: 1.5em; }
+        .popup-message { color: var(--dark-text); margin-bottom: 20px; font-weight: 500; }
 
-.popup-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
+        .popup-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-.popup-btn {
-    padding: 10px 25px;
-    border-radius: 50px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-    font-family: 'Quicksand', sans-serif;
-}
+        .popup-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Quicksand', sans-serif;
+        }
 
-.btn-confirm { background: var(--highlight-color); color: white; box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4); }
-.btn-cancel { background: #f0f0f0; color: #888; }
-.popup-btn:hover { transform: scale(1.05); opacity: 0.9; }
+        .btn-confirm { background: var(--highlight-color); color: white; box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4); }
+        .btn-cancel { background: #f0f0f0; color: #888; }
+        .popup-btn:hover { transform: scale(1.05); opacity: 0.9; }
 
-/* Animations */
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes popIn { to { transform: scale(1); } }
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes popIn { to { transform: scale(1); } }
 
-#loginUsernameInput:focus {
-    border-color: var(--highlight-color) !important;
-    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
-}
+        #loginUsernameInput:focus {
+            border-color: var(--highlight-color) !important;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+        }
 
-/* --- Hoạt động Nhật ký --- */
-.activity-log-section {
-    margin-top: 40px;
-    background: white;
-    padding: 25px;
-    border-radius: var(--border-radius-soft);
-    border: 2px solid var(--primary-color);
-    box-shadow: var(--box-shadow-soft);
-    text-align: left;
-}
+        /* --- Hoạt động Nhật ký --- */
+        .activity-log-section {
+            margin-top: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius-soft);
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--box-shadow-soft);
+            text-align: left;
+        }
 
-.log-container {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-top: 15px;
-    border-radius: 10px;
-    background: var(--secondary-color);
-    padding: 10px;
-}
+        .log-container {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: var(--secondary-color);
+            padding: 10px;
+        }
 
-.log-item {
-    padding: 12px;
-    border-bottom: 1px dashed var(--accent-color);
-    font-size: 0.95em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .log-item {
+            padding: 12px;
+            border-bottom: 1px dashed var(--accent-color);
+            font-size: 0.95em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.log-item:last-child { border-bottom: none; }
-.log-time { color: #888; font-size: 0.85em; }
-.log-msg { font-weight: 500; color: var(--dark-text); }
-.log-type-win { color: #ff1493; font-weight: bold; }
-.log-type-pay { color: #2e8b57; font-weight: bold; }
+        .log-item:last-child { border-bottom: none; }
+        .log-time { color: #888; font-size: 0.85em; }
+        .log-msg { font-weight: 500; color: var(--dark-text); }
+        .log-type-win { color: #ff1493; font-weight: bold; }
+        .log-type-pay { color: #2e8b57; font-weight: bold; }
+        .log-type-withdraw { color: #ff4500; font-weight: bold; } /* Màu cam đỏ cho log rút tiền */
 
-/* Tùy chỉnh thanh cuộn cho xinh */
-.log-container::-webkit-scrollbar { width: 8px; }
-.log-container::-webkit-scrollbar-track { background: var(--secondary-color); }
-.log-container::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
+        /* Tùy chỉnh thanh cuộn cho xinh */
+        .log-container::-webkit-scrollbar { width: 8px; }
+        .log-container::-webkit-scrollbar-track { background: var(--secondary-color); }
+        .log-container::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 10px; }
 
-/* --- Khu vực Hướng dẫn & Tips --- */
-.guide-section {
-    margin: 20px 0 30px 0;
-    padding: 20px;
-    background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
-    border-radius: var(--border-radius-soft);
-    border: 2px solid var(--primary-color);
-    box-shadow: var(--box-shadow-soft);
-    text-align: left;
-}
+        /* --- Khu vực Hướng dẫn & Tips --- */
+        .guide-section {
+            margin: 20px 0 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+            border-radius: var(--border-radius-soft);
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--box-shadow-soft);
+            text-align: left;
+        }
 
-.guide-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 
-.guide-card {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    border-left: 5px solid var(--highlight-color);
-}
+        .guide-card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 5px solid var(--highlight-color);
+        }
 
-.guide-card h4 {
-    margin-top: 0;
-    color: var(--highlight-color);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .guide-card h4 {
+            margin-top: 0;
+            color: var(--highlight-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.guide-card ul {
-    margin: 0;
-    padding-left: 20px;
-    font-size: 0.9em;
-    color: var(--dark-text);
-}
+        .guide-card ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.9em;
+            color: var(--dark-text);
+        }
 
-.guide-card ul li {
-    margin-bottom: 5px;
-}
+        .guide-card ul li {
+            margin-bottom: 5px;
+        }
 
-@media (max-width: 768px) {
-    .guide-grid {
-        grid-template-columns: 1fr;
-    }
-}
+        @media (max-width: 768px) {
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-/* Tùy chỉnh thanh cuộn trong Popup cho đẹp */
-#guidePopup div::-webkit-scrollbar {
-    width: 6px;
-}
-#guidePopup div::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
-}
+        /* Tùy chỉnh thanh cuộn trong Popup cho đẹp */
+        #guidePopup div::-webkit-scrollbar {
+            width: 6px;
+        }
+        #guidePopup div::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -585,40 +591,51 @@
             </div>
         </div>
 
-<div style="margin: 20px 0;">
-    <button onclick="toggleGuidePopup(true)" class="spin-button" style="font-size: 1.2em; padding: 12px 30px; background: linear-gradient(to right, #ff69b4, #da70d6);">
-        📖 XEM CẨM NANG & TIPS SĂN QUÀ
-    </button>
-</div>
+        <div style="margin: 20px 0;">
+            <button onclick="toggleGuidePopup(true)" class="spin-button" style="font-size: 1.2em; padding: 12px 30px; background: linear-gradient(to right, #ff69b4, #da70d6);">
+                📖 XEM CẨM NANG & TIPS SĂN QUÀ
+            </button>
+        </div>
 
         <div class="recharge-area">
-    <h2><span class="icon">💸</span>KHU VỰC NẠP TIỀN</h2>
-    <p>LƯU Ý: Thông báo cho người tổ chức để xác nhận.</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <input type="number" id="rechargeAmount" placeholder="Số tiền (VND)" 
-               style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); flex: 1; min-width: 200px;">
-        <button onclick="recharge()" 
-                style="background-color: #4CAF50; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; max-width: 150px;">
-            NẠP TIỀN
-        </button>
-    </div>
-</div>
+            <h2><span class="icon">💸</span>KHU VỰC NẠP TIỀN</h2>
+            <p>LƯU Ý: Thông báo cho người tổ chức để xác nhận.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                <input type="number" id="rechargeAmount" placeholder="Số tiền nạp (VND)" 
+                       style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); flex: 1; min-width: 200px;">
+                <button onclick="recharge()" 
+                        style="background-color: #4CAF50; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; max-width: 150px;">
+                    NẠP TIỀN
+                </button>
+            </div>
+        </div>
 
-<div class="vietnam-time-container">
-    <div class="time-card">
-        <span class="time-label">💖 GIỜ VIỆT NAM HIỆN TẠI 💖</span>
-        <div id="currentVNHour" class="time-digital">00:00:00</div>
-    </div>
-</div>
+        <div class="withdraw-area">
+            <h2><span class="icon">🏦</span>KHU VỰC RÚT TIỀN DƯ</h2>
+            <p>Hệ thống hỗ trợ hoàn trả số dư tài khoản của bạn. Vui lòng báo Admin sau khi thực hiện.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                <input type="number" id="withdrawAmount" placeholder="Số tiền muốn rút (VND)" 
+                       style="padding: 12px; border-radius: 10px; border: 2px solid #a2d1a4; flex: 1; min-width: 200px;">
+                <button onclick="withdraw()" 
+                        style="background-color: #ff4500; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; max-width: 150px;">
+                    RÚT TIỀN
+                </button>
+            </div>
+        </div>
+
+        <div class="vietnam-time-container">
+            <div class="time-card">
+                <span class="time-label">💖 GIỜ VIỆT NAM HIỆN TẠI 💖</span>
+                <div id="currentVNHour" class="time-digital">00:00:00</div>
+            </div>
+        </div>
 
         <div class="spin-area">
             <div class="wheel-section" id="wheel1">
-    <h2><span class="icon">👑</span> VÒNG QUAY SKIN LIÊN QUÂN</h2>
-    
-    <div class="wheel-container">
-                    <div class="wheel" id="skinWheel">
-                        
-                    </div>
+                <h2><span class="icon">👑</span> VÒNG QUAY SKIN LIÊN QUÂN</h2>
+                
+                <div class="wheel-container">
+                    <div class="wheel" id="skinWheel"></div>
                     <div class="wheel-indicator"></div>
                 </div>
                 
@@ -665,9 +682,7 @@
                 <h2><span class="icon">🎁</span> VÒNG QUAY THẺ GARENA</h2>
                 
                 <div class="wheel-container">
-                    <div class="wheel" id="garenaWheel">
-                        
-                    </div>
+                    <div class="wheel" id="garenaWheel"></div>
                     <div class="wheel-indicator"></div>
                 </div>
                 
@@ -710,143 +725,144 @@
             </div>
             
             <div class="wheel-section" id="wheel3">
-    <h2><span class="icon">🔥</span> VÒNG QUAY THẺ ZING</h2>
-    
-    <div class="wheel-container">
-        <div class="wheel" id="zingWheel"></div>
-        <div class="wheel-indicator"></div>
-    </div>
-    
-    <div class="price-info">
-        Giá: <span id="zingPriceDisplay">
-            <span id="zingPriceMain" style="color: var(--highlight-color);">10.000</span> VND/lượt
-        </span>
-    </div>
-    
-    <div class="discount-schedule">
-        <strong>⏰ LỊCH GIẢM GIÁ TRONG NGÀY ⏰</strong><br>
-        ✨ Giờ Vàng (10%): 12:00 PM - 01:00 PM<br>
-        💎 Giờ Kim Cương (20%): 08:00 PM - 09:00 PM
-    </div>
-    
-    <div class="price-info discount-info">
-        Trạng thái hiện tại: <span id="zingDiscountInfo" style="color: red; font-weight: normal;">Chưa áp dụng giảm giá.</span>
-    </div>
-    <p style="font-size: 1.1em; font-weight: bold; color: var(--dark-text);">Số lượt đã quay: <span id="zingSpinCount" style="color: var(--highlight-color);">0</span></p>
-    <button class="spin-button" onclick="spinWheel(3, 10000)">QUAY NGAY! ⚡</button>
-    
-    <h3>🎁 QUÀ CHẮC CHẮN THEO LƯỢT:</h3>
-    <ul class="rule-list">
-        <li>2 lượt: Chắc chắn trúng thẻ Zing 20k</li>
-        <li>5 lượt: Chắc chắn trúng thẻ Zing 50k</li>
-        <li>10 lượt: Chắc chắn trúng thẻ Zing 100k</li>
-        <li>15 lượt: Chắc chắn trúng thẻ Zing 100k+50k</li>
-        <li>20 lượt: Chắc chắn trúng thẻ Zing 200k</li>
-    </ul>
+                <h2><span class="icon">🔥</span> VÒNG QUAY THẺ ZING</h2>
+                
+                <div class="wheel-container">
+                    <div class="wheel" id="zingWheel"></div>
+                    <div class="wheel-indicator"></div>
+                </div>
+                
+                <div class="price-info">
+                    Giá: <span id="zingPriceDisplay">
+                        <span id="zingPriceMain" style="color: var(--highlight-color);">10.000</span> VND/lượt
+                    </span>
+                </div>
+                
+                <div class="discount-schedule">
+                    <strong>⏰ LỊCH GIẢM GIÁ TRONG NGÀY ⏰</strong><br>
+                    ✨ Giờ Vàng (10%): 12:00 PM - 01:00 PM<br>
+                    💎 Giờ Kim Cương (20%): 08:00 PM - 09:00 PM
+                </div>
+                
+                <div class="price-info discount-info">
+                    Trạng thái hiện tại: <span id="zingDiscountInfo" style="color: red; font-weight: normal;">Chưa áp dụng giảm giá.</span>
+                </div>
+                <p style="font-size: 1.1em; font-weight: bold; color: var(--dark-text);">Số lượt đã quay: <span id="zingSpinCount" style="color: var(--highlight-color);">0</span></p>
+                <button class="spin-button" onclick="spinWheel(3, 10000)">QUAY NGAY! ⚡</button>
+                
+                <h3>🎁 QUÀ CHẮC CHẮN THEO LƯỢT:</h3>
+                <ul class="rule-list">
+                    <li>2 lượt: Chắc chắn trúng thẻ Zing 20k</li>
+                    <li>5 lượt: Chắc chắn trúng thẻ Zing 50k</li>
+                    <li>10 lượt: Chắc chắn trúng thẻ Zing 100k</li>
+                    <li>15 lượt: Chắc chắn trúng thẻ Zing 100k+50k</li>
+                    <li>20 lượt: Chắc chắn trúng thẻ Zing 200k</li>
+                </ul>
 
-    <div class="wheel-legend">
-        <h3>Chú giải vật phẩm (Tỷ lệ)</h3>
-        <div class="legend-grid">
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-0);"></div><span>Thẻ 10K (97.0%)</span></div>
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-1);"></div><span>Thẻ 20K (2.0%)</span></div>
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-2);"></div><span>Thẻ 50K (0.6%)</span></div>
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-3);"></div><span>Thẻ 100K (0.3%)</span></div>
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-4);"></div><span>Thẻ 150K (0.06%)</span></div>
-            <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-5);"></div><span>Thẻ 200K (0.04%)</span></div>
-        </div>
-    </div>
-</div>
+                <div class="wheel-legend">
+                    <h3>Chú giải vật phẩm (Tỷ lệ)</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-0);"></div><span>Thẻ 10K (97.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-1);"></div><span>Thẻ 20K (2.0%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-2);"></div><span>Thẻ 50K (0.6%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-3);"></div><span>Thẻ 100K (0.3%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-4);"></div><span>Thẻ 150K (0.06%)</span></div>
+                        <div class="legend-item"><div class="legend-color-box" style="background-color: var(--wheel-color-5);"></div><span>Thẻ 200K (0.04%)</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="activity-log-section">
-    <h2><span class="icon">📜</span> NHẬT KÝ HOẠT ĐỘNG</h2>
-    <div id="activityLog" class="log-container">
-        <div style="text-align: center; color: #888; padding: 20px;">Chưa có hoạt động nào...</div>
-    </div>
-</div>
-
-        <div style="margin-top: 40px; padding: 20px; border-top: 2px dashed var(--primary-color);">
-    <p style="font-style: italic; color: #db7093; font-size: 0.95em; line-height: 1.8;">
-        💖 <strong>LƯU Ý 1:</strong> Tất cả vật phẩm trúng thưởng đều không được phép quy đổi thành tiền thật dưới bất kỳ hình thức nào. <br>
-        💖 <strong>LƯU Ý 2:</strong> Vì số tiền bạn nạp vào là tiền thật, nên nếu sau khi chơi bạn vẫn còn dư số dư trong tài khoản, hệ thống sẽ hỗ trợ hoàn lại tiền cho bạn.
-    </p>
-    <p style="color: #ff69b4; font-weight: bold; font-size: 0.85em; margin-top: 10px;">
-        ✨ Chúc bạn có những giây phút thư giãn thật tuyệt vời tại Vòng Quay "Siêu Hời"✨
-    </p>
-</div>
-
-    </div>
-
-<div id="customPopup" class="popup-overlay">
-    <div class="popup-content">
-        <div id="popupIcon" class="popup-icon">💖</div>
-        <h3 id="popupTitle">Thông báo</h3>
-        <p id="popupMessage">Nội dung thông báo ở đây...</p>
-        <div class="popup-buttons">
-            <button id="popupConfirmBtn" class="popup-btn btn-confirm">Xác nhận</button>
-            <button id="popupCancelBtn" class="popup-btn btn-cancel">Hủy</button>
-        </div>
-    </div>
-</div>
-
-<div id="loginPopup" class="popup-overlay">
-    <div class="popup-content">
-        <div class="popup-icon">🔑</div>
-        <h3>ĐĂNG NHẬP</h3>
-        <p>Vui lòng nhập tên để lưu dữ liệu quay nhé:</p>
-        <input type="text" id="loginUsernameInput" placeholder="Tên của bạn..." 
-               style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); width: 80%; margin-bottom: 20px; outline: none; text-align: center; font-family: 'Quicksand';">
-        <div class="popup-buttons">
-            <button id="loginConfirmBtn" class="popup-btn btn-confirm">BẮT ĐẦU</button>
-            <button id="loginCancelBtn" class="popup-btn btn-cancel">HỦY</button>
-        </div>
-    </div>
-</div>
-
-<div id="guidePopup" class="popup-overlay">
-    <div class="popup-content" style="max-width: 600px; text-align: left; padding: 25px;">
-        <div class="popup-icon" style="text-align: center;">📖</div>
-        <h3 style="text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">✨ CẨM NANG SĂN QUÀ "SIÊU HỜI" ✨</h3>
-        
-        <div style="max-height: 400px; overflow-y: auto; padding-right: 10px; font-family: 'Quicksand';">
-            <h4 style="color: var(--highlight-color);">🎮 CÁCH CHƠI ĐƠN GIẢN</h4>
-            <ul style="padding-left: 20px; font-size: 0.95em;">
-                <li>🔑 <strong>Đăng nhập:</strong> Nhấn "Đăng Nhập" để hệ thống nhận diện và lưu lượt quay riêng cho bạn.</li>
-                <li>💸 <strong>Nạp tiền:</strong> Nhập số tiền và báo Admin. Số dư sẽ được cộng ngay khi xác nhận.</li>
-                <li>🎰 <strong>Quay & Nhận:</strong> Chọn vòng quay, nhấn nút. Khi trúng, hãy nhấn "Xác nhận nhận quà" để lưu kết quả.</li>
-            </ul>
-
-            <h4 style="color: var(--highlight-color); margin-top: 20px;">💡 TIPS SĂN QUÀ GIÁ RẺ</h4>
-            <div style="background: var(--secondary-color); padding: 15px; border-radius: 15px; border-left: 5px solid var(--highlight-color);">
-                <p style="margin: 0 0 10px 0;">⏰ ✨ <b>Săn Giờ Vàng:</b> Hãy chú ý đồng hồ trên Web. Quay vào khung giờ <b>Vàng/Kim Cương</b> để được hệ thống tự động giảm giá từ <b>10% - 20%</b>.</p>
-                
-                <p style="margin: 0 0 10px 0;">🛡️ ✨ <b>Cơ chế Tích Lũy (Bảo Hiểm):</b> Đây là điểm đặc biệt nhất! 
-                    <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: var(--dark-text);">
-                        ➕ - Mỗi khi bạn quay, hệ thống sẽ cộng dồn <b>"Số lượt đã quay"</b>. <br>
-                        🏆 - Khi chạm các mốc (ví dụ: 2 lượt, 5 lượt...), bạn sẽ <b>CHẮC CHẮN</b> nhận được quà cao cấp tương ứng mà không cần dựa vào may mắn. <br>
-                        🚫 - <b>Cách để tích lượt:</b> Khi trúng quà nhỏ, nếu bạn muốn nuôi mốc cao hơn, hãy <b>BẤM NÚT "HỦY"</b> khi bảng thông báo hỏi "Có muốn lấy quà không?". Lượt quay của bạn sẽ được giữ lại và tích lũy tiếp. <br>
-                        🔄 - Nếu nhận quà nhỏ (như Skin 99QH), số lượt tích lũy <b>KHÔNG bị reset</b> miễn là bạn không bấm xác nhận lấy nó.
-                    </span>
-                </p>
-
-                <p style="margin: 0 0 10px 0; background: #fff5f5; padding: 10px; border-radius: 10px; border: 1px solid #ffcccc;">
-                    <b style="color: #ff0000;">⚠️ LƯU Ý QUAN TRỌNG:</b> 
-                    <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #d32f2f;">
-                        🚫 Nếu bạn đang tích lượt để săn các mốc quà cao hơn mà lại nhấn <b>"Xác nhận nhận quà"</b> cho một món quà nhỏ vừa trúng, hệ thống sẽ <b>RESET số lượt về 0 ngay lập tức</b>. Khi đó, mọi công sức tích lũy của bạn đều sẽ "đổ sông đổ biển". Hãy cân nhắc kỹ trước khi nhận! 🌊
-                    </span>
-                </p>
-
-                <p style="margin: 0;">💾 ✨ <b>Bảo toàn dữ liệu:</b> Bạn có thể thoát web bất cứ lúc nào. Khi quay lại và đăng nhập đúng tên cũ, số lượt tích lũy và số dư sẽ được khôi phục 100%.</p>
+            <h2><span class="icon">📜</span> NHẬT KÝ HOẠT ĐỘNG</h2>
+            <div id="activityLog" class="log-container">
+                <div style="text-align: center; color: #888; padding: 20px;">Chưa có hoạt động nào...</div>
             </div>
         </div>
 
-        <div class="popup-buttons" style="margin-top: 25px;">
-            <button onclick="toggleGuidePopup(false)" class="popup-btn btn-confirm" style="width: 100%;">💖 ĐÃ HIỂU, ĐI SĂN QUÀ THÔI! ✨</button>
+        <div style="margin-top: 40px; padding: 20px; border-top: 2px dashed var(--primary-color);">
+            <p style="font-style: italic; color: #db7093; font-size: 0.95em; line-height: 1.8;">
+                💖 <strong>LƯU Ý 1:</strong> Tất cả vật phẩm trúng thưởng đều không được phép quy đổi thành tiền thật dưới bất kỳ hình thức nào. <br>
+                💖 <strong>LƯU Ý 2:</strong> Vì số tiền bạn nạp vào là tiền thật, nên nếu sau khi chơi bạn vẫn còn dư số dư trong tài khoản, hệ thống sẽ hỗ trợ hoàn lại tiền cho bạn.
+            </p>
+            <p style="color: #ff69b4; font-weight: bold; font-size: 0.85em; margin-top: 10px;">
+                ✨ Chúc bạn có những giây phục thư giãn thật tuyệt vời tại Vòng Quay "Siêu Hời"✨
+            </p>
+        </div>
+
+    </div>
+
+    <div id="customPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div id="popupIcon" class="popup-icon">💖</div>
+            <h3 id="popupTitle">Thông báo</h3>
+            <p id="popupMessage">Nội dung thông báo ở đây...</p>
+            <div class="popup-buttons">
+                <button id="popupConfirmBtn" class="popup-btn btn-confirm">Xác nhận</button>
+                <button id="popupCancelBtn" class="popup-btn btn-cancel">Hủy</button>
+            </div>
         </div>
     </div>
-</div>
+
+    <div id="loginPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">🔑</div>
+            <h3>ĐĂNG NHẬP</h3>
+            <p>Vui lòng nhập tên để lưu dữ liệu quay nhé:</p>
+            <input type="text" id="loginUsernameInput" placeholder="Tên của bạn..." 
+                   style="padding: 12px; border-radius: 10px; border: 2px solid var(--primary-color); width: 80%; margin-bottom: 20px; outline: none; text-align: center; font-family: 'Quicksand';">
+            <div class="popup-buttons">
+                <button id="loginConfirmBtn" class="popup-btn btn-confirm">BẮT ĐẦU</button>
+                <button id="loginCancelBtn" class="popup-btn btn-cancel">HỦY</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="guidePopup" class="popup-overlay">
+        <div class="popup-content" style="max-width: 600px; text-align: left; padding: 25px;">
+            <div class="popup-icon" style="text-align: center;">📖</div>
+            <h3 style="text-align: center; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px;">✨ CẨM NANG SĂN QUÀ "SIÊU HỜI" ✨</h3>
+            
+            <div style="max-height: 400px; overflow-y: auto; padding-right: 10px; font-family: 'Quicksand';">
+                <h4 style="color: var(--highlight-color);">🎮 CÁCH CHƠI ĐƠN GIẢN</h4>
+                <ul style="padding-left: 20px; font-size: 0.95em;">
+                    <li>🔑 <strong>Đăng nhập:</strong> Nhấn "Đăng Nhập" để hệ thống nhận diện và lưu lượt quay riêng cho bạn.</li>
+                    <li>💸 <strong>Nạp tiền:</strong> Nhập số tiền và báo Admin. Số dư sẽ được cộng ngay khi xác nhận.</li>
+                    <li>🎰 <strong>Quay & Nhận:</strong> Chọn vòng quay, nhấn nút. Khi trúng, hãy nhấn "Xác nhận nhận quà" để lưu kết quả.</li>
+                </ul>
+
+                <h4 style="color: var(--highlight-color); margin-top: 20px;">💡 TIPS SĂN QUÀ GIÁ RẺ</h4>
+                <div style="background: var(--secondary-color); padding: 15px; border-radius: 15px; border-left: 5px solid var(--highlight-color);">
+                    <p style="margin: 0 0 10px 0;">⏰ ✨ <b>Săn Giờ Vàng:</b> Hãy chú ý đồng hồ trên Web. Quay vào khung giờ <b>Vàng/Kim Cương</b> để được hệ thống tự động giảm giá từ <b>10% - 20%</b>.</p>
+                    
+                    <p style="margin: 0 0 10px 0;">🛡️ ✨ <b>Cơ chế Tích Lũy (Bảo Hiểm):</b> Đây là điểm đặc biệt nhất! 
+                        <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: var(--dark-text);">
+                            ➕ - Mỗi khi bạn quay, hệ thống sẽ cộng dồn <b>"Số lượt đã quay"</b>. <br>
+                            🏆 - Khi chạm các mốc (ví dụ: 2 lượt, 5 lượt...), bạn sẽ <b>CHẮC CHẮN</b> nhận được quà cao cấp tương ứng mà không cần dựa vào may mắn. <br>
+                            🚫 - <b>Cách để tích lượt:</b> Khi trúng quà nhỏ, nếu bạn muốn nuôi mốc cao hơn, hãy <b>BẤM NÚT "HỦY"</b> khi bảng thông báo hỏi "Có muốn lấy quà không?". Lượt quay của bạn sẽ được giữ lại và tích lũy tiếp. <br>
+                            🔄 - Nếu nhận quà nhỏ (như Skin 99QH), số lượt tích lũy <b>KHÔNG bị reset</b> miễn là bạn không bấm xác nhận lấy nó.
+                        </span>
+                    </p>
+
+                    <p style="margin: 0 0 10px 0; background: #fff5f5; padding: 10px; border-radius: 10px; border: 1px solid #ffcccc;">
+                        <b style="color: #ff0000;">⚠️ LƯU Ý QUAN TRỌNG:</b> 
+                        <br><span style="font-size: 0.9em; display: block; margin-top: 5px; color: #d32f2f;">
+                            🚫 Nếu bạn đang tích lượt để săn các mốc quà cao hơn mà lại nhấn <b>"Xác nhận nhận quà"</b> cho một món quà nhỏ vừa trúng, hệ thống sẽ <b>RESET số lượt về 0 ngay lập tức</b>. Khi đó, mọi công sức tích lũy của bạn đều sẽ "đổ sông đổ biển". Hãy cân nhắc kỹ trước khi nhận! 🌊
+                        </span>
+                    </p>
+
+                    <p style="margin: 0;">💾 ✨ <b>Bảo toàn dữ liệu:</b> Bạn có thể thoát web bất cứ lúc nào. Khi quay lại và đăng nhập đúng tên cũ, số lượt tích lũy và số dư sẽ được khôi phục 100%.</p>
+                </div>
+            </div>
+
+            <div class="popup-buttons" style="margin-top: 25px;">
+                <button onclick="toggleGuidePopup(false)" class="popup-btn btn-confirm" style="width: 100%;">💖 ĐÃ HIỂU, ĐI SĂN QUÀ THÔI! ✨</button>
+            </div>
+        </div>
+    </div>
+
     <script>
-      // --- LOGIC NHẬT KÝ HOẠT ĐỘNG ---
+    // --- LOGIC NHẬT KÝ HOẠT ĐỘNG ---
     function addLog(message, typeClass) {
         let logs = JSON.parse(localStorage.getItem(currentUser + '_activityLogs')) || [];
         const now = new Date();
@@ -947,7 +963,7 @@
     // 3. ĐỊNH NGHĨA VẬT PHẨM (Giữ nguyên 100%)
     const skinItems = [ { name: "Skin 99QH", index: 0, prob: 0.95 }, { name: "Skin 199QH", index: 1, prob: 0.03 }, { name: "Skin 399QH", index: 2, prob: 0.01 }, { name: "Skin 499QH", index: 3, prob: 0.005 }, { name: "Skin 599QH", index: 4, prob: 0.003 }, { name: "Skin 799QH", index: 5, prob: 0.002 } ];
     const garenaItems = [ { name: "Thẻ Garena 20K", index: 0, prob: 0.95 }, { name: "Thẻ Garena 50K (+10K)", index: 1, prob: 0.03 }, { name: "Thẻ Garena 100K", index: 2, prob: 0.01 }, { name: "Thẻ Garena 200K", index: 3, prob: 0.005 }, { name: "Thẻ Garena 200K+50K (+10K)", index: 4, prob: 0.003 }, { name: "Thẻ Garena 200K+100K", index: 5, prob: 0.002 } ];
-    const zingItems = [ { name: "Thẻ Zing 10K", index: 0, prob: 0.97 }, { name: "Thẻ Zing 20K", index: 1, prob: 0.02 }, { name: "Thẻ Zing 50K", index: 2, prob: 0.006 }, { name: "Thẻ Zing 100K", index: 3, prob: 0.003 }, { name: "Thẻ Zing 100K+50K", index: 4, prob: 0.0006 }, { name: "Thẻ Zing 200K", index: 5, prob: 0.0004 } ];
+    const zingItems = [ { name: "Thẻ Zing 10K", index: 0, prob: 0.97 }, { name: "Thẻ Zing 20K", index: 1, font: 1, prob: 0.02 }, { name: "Thẻ Zing 50K", index: 2, prob: 0.006 }, { name: "Thẻ Zing 100K", index: 3, prob: 0.003 }, { name: "Thẻ Zing 100K+50K", index: 4, prob: 0.0006 }, { name: "Thẻ Zing 200K", index: 5, prob: 0.0004 } ];
 
     // 4. XỬ LÝ ĐĂNG NHẬP (Sửa lại để tự động load dữ liệu cũ của User)
     function showLoginPrompt() {
@@ -984,7 +1000,6 @@
     }
 
     // 5. XỬ LÝ NẠP TIỀN
-    // Cập nhật hàm recharge để ghi log nạp tiền
     function recharge() {
         if (currentUser === "Khách") {
             showSweetAlert("Opps!", "Vui lòng Đăng Nhập trước khi nạp tiền.", "🔑", false);
@@ -1006,84 +1021,113 @@
         }
     }
 
+    // 5.5 LOGIC XỬ LÝ RÚT TIỀN MỚI
+    function withdraw() {
+        if (currentUser === "Khách") {
+            showSweetAlert("Opps!", "Vui lòng Đăng Nhập trước khi rút tiền.", "🔑", false);
+            return;
+        }
+        const amountInput = document.getElementById('withdrawAmount');
+        const amount = parseFloat(amountInput.value);
+
+        if (isNaN(amount) || amount <= 0) {
+            showSweetAlert("Lỗi", "Vui lòng nhập số tiền muốn rút hợp lệ.", "❌", false);
+            return;
+        }
+
+        if (amount > userBalance) {
+            showSweetAlert("Thất bại", `Số dư hiện tại của bạn (${userBalance.toLocaleString('vi-VN')} VND) không đủ để rút ${amount.toLocaleString('vi-VN')} VND.`, "⚠️", false);
+            return;
+        }
+
+        showSweetAlert("Xác nhận rút tiền", `Bạn muốn rút ${amount.toLocaleString('vi-VN')} VND từ số dư tài khoản? Đừng quên liên hệ Admin để nhận tiền mặt/chuyển khoản nha!`, "🏦", true, () => {
+            userBalance -= amount;
+            addLog(`Đã rút -${amount.toLocaleString()} VND khỏi ví`, 'log-type-withdraw'); // Ghi log rút tiền vào nhật ký
+            saveAllToLocal();
+            updateUI();
+            showSweetAlert("Thành công", `Yêu cầu rút tiền thành công! Vui lòng báo Admin xử lý.`, "✨", false);
+            amountInput.value = '';
+        });
+    }
+
     // 6. THỜI GIAN & GIÁ (Giữ nguyên)
     function getVietnamHour() {
         return (new Date().getUTCHours() + 7) % 24;
     }
 
     function updatePrices() {
-    const hour = getVietnamHour(); 
-    const vnTime = new Date().toLocaleTimeString('vi-VN', { 
-        timeZone: 'Asia/Ho_Chi_Minh', 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
-    });
-    
-    if (document.getElementById('currentVNHour')) {
-        document.getElementById('currentVNHour').textContent = vnTime;
+        const hour = getVietnamHour(); 
+        const vnTime = new Date().toLocaleTimeString('vi-VN', { 
+            timeZone: 'Asia/Ho_Chi_Minh', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        });
+        
+        if (document.getElementById('currentVNHour')) {
+            document.getElementById('currentVNHour').textContent = vnTime;
+        }
+
+        // Khởi tạo giá gốc và thông báo mặc định
+        let sP = 50000, gP = 20000, zP = 10000;
+        let sMsg = "Chưa áp dụng giảm giá.", sColor = "red";
+        let gMsg = "Chưa áp dụng giảm giá.", gColor = "red";
+        let zMsg = "Chưa áp dụng giảm giá.", zColor = "red";
+
+        // --- Logic Vòng Quay Skin ---
+        if (hour === 11) {
+            sP = 45000;
+            sMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
+            sColor = "#2e8b57"; // Màu xanh lá đậm cho cảm giác "hời"
+        } else if (hour === 18) {
+            sP = 44000;
+            sMsg = "💎 Đang trong Giờ Kim Cương (Giảm 12%)!";
+            sColor = "#ff1493"; // Màu hồng đậm
+        }
+
+        // --- Logic Vòng Quay Garena ---
+        if (hour === 9) {
+            gP = 18000;
+            gMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
+            gColor = "#2e8b57";
+        } else if (hour === 16) {
+            gP = 17000;
+            gMsg = "💎 Đang trong Giờ Kim Cương (Giảm 15%)!";
+            gColor = "#ff1493";
+        }
+
+        // --- Logic Vòng Quay Zing ---
+        if (hour === 12) {
+            zP = 9000;
+            zMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
+            zColor = "#2e8b57";
+        } else if (hour === 20) {
+            zP = 8000;
+            zMsg = "💎 Đang trong Giờ Kim Cương (Giảm 20%)!";
+            zColor = "#ff1493";
+        }
+
+        // Cập nhật giá hiển thị trên giao diện
+        document.getElementById('skinPrice').textContent = sP.toLocaleString('vi-VN');
+        document.getElementById('skinDiscountInfo').textContent = sMsg;
+        document.getElementById('skinDiscountInfo').style.color = sColor;
+
+        document.getElementById('garenaPrice').textContent = gP.toLocaleString('vi-VN');
+        document.getElementById('garenaDiscountInfo').textContent = gMsg;
+        document.getElementById('garenaDiscountInfo').style.color = gColor;
+
+        // Riêng vòng Zing có style hiển thị giá cũ/mới đặc biệt
+        const zingDisplay = document.getElementById('zingPriceDisplay');
+        if (hour === 12 || hour === 20) {
+            zingDisplay.innerHTML = `<span class="old-price">10.000</span> <span style="color:var(--highlight-color)">${zP.toLocaleString('vi-VN')}</span> VND`;
+        } else {
+            zingDisplay.innerHTML = `<span style="color:var(--highlight-color)">${zP.toLocaleString('vi-VN')}</span> VND/lượt`;
+        }
+        document.getElementById('zingDiscountInfo').textContent = zMsg;
+        document.getElementById('zingDiscountInfo').style.color = zColor;
+
+        return { skinPrice: sP, garenaPrice: gP, zingPrice: zP };
     }
-
-    // Khởi tạo giá gốc và thông báo mặc định
-    let sP = 50000, gP = 20000, zP = 10000;
-    let sMsg = "Chưa áp dụng giảm giá.", sColor = "red";
-    let gMsg = "Chưa áp dụng giảm giá.", gColor = "red";
-    let zMsg = "Chưa áp dụng giảm giá.", zColor = "red";
-
-    // --- Logic Vòng Quay Skin ---
-    if (hour === 11) {
-        sP = 45000;
-        sMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
-        sColor = "#2e8b57"; // Màu xanh lá đậm cho cảm giác "hời"
-    } else if (hour === 18) {
-        sP = 44000;
-        sMsg = "💎 Đang trong Giờ Kim Cương (Giảm 12%)!";
-        sColor = "#ff1493"; // Màu hồng đậm
-    }
-
-    // --- Logic Vòng Quay Garena ---
-    if (hour === 9) {
-        gP = 18000;
-        gMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
-        gColor = "#2e8b57";
-    } else if (hour === 16) {
-        gP = 17000;
-        gMsg = "💎 Đang trong Giờ Kim Cương (Giảm 15%)!";
-        gColor = "#ff1493";
-    }
-
-    // --- Logic Vòng Quay Zing ---
-    if (hour === 12) {
-        zP = 9000;
-        zMsg = "✨ Đang trong Giờ Vàng (Giảm 10%)!";
-        zColor = "#2e8b57";
-    } else if (hour === 20) {
-        zP = 8000;
-        zMsg = "💎 Đang trong Giờ Kim Cương (Giảm 20%)!";
-        zColor = "#ff1493";
-    }
-
-    // Cập nhật giá hiển thị trên giao diện
-    document.getElementById('skinPrice').textContent = sP.toLocaleString('vi-VN');
-    document.getElementById('skinDiscountInfo').textContent = sMsg;
-    document.getElementById('skinDiscountInfo').style.color = sColor;
-
-    document.getElementById('garenaPrice').textContent = gP.toLocaleString('vi-VN');
-    document.getElementById('garenaDiscountInfo').textContent = gMsg;
-    document.getElementById('garenaDiscountInfo').style.color = gColor;
-
-    // Riêng vòng Zing có style hiển thị giá cũ/mới đặc biệt
-    const zingDisplay = document.getElementById('zingPriceDisplay');
-    if (hour === 12 || hour === 20) {
-        zingDisplay.innerHTML = `<span class="old-price">10.000</span> <span style="color:var(--highlight-color)">${zP.toLocaleString('vi-VN')}</span> VND`;
-    } else {
-        zingDisplay.innerHTML = `<span style="color:var(--highlight-color)">${zP.toLocaleString('vi-VN')}</span> VND/lượt`;
-    }
-    document.getElementById('zingDiscountInfo').textContent = zMsg;
-    document.getElementById('zingDiscountInfo').style.color = zColor;
-
-    return { skinPrice: sP, garenaPrice: gP, zingPrice: zP };
-}
     setInterval(updatePrices, 1000);
 
     // 7. LOGIC QUAY (Giữ nguyên logic Chắc Chắn & Tỷ lệ của bạn)
@@ -1172,14 +1216,14 @@
     }
     
     // Hàm đóng/mở Popup Cẩm Nang
-function toggleGuidePopup(show) {
-    const popup = document.getElementById('guidePopup');
-    if (show) {
-        popup.style.display = 'flex';
-    } else {
-        popup.style.display = 'none';
+    function toggleGuidePopup(show) {
+        const popup = document.getElementById('guidePopup');
+        if (show) {
+            popup.style.display = 'flex';
+        } else {
+            popup.style.display = 'none';
+        }
     }
-}
-</script>
+    </script>
 </body>
 </html>
